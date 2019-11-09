@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>筑梦师</title>
+<title>李宗秦，你是我的命 | 筑梦师</title>
 <meta name="description" content="沉住气，静下心，做有增量的事情，一步一步慢慢来。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://woaiqin.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -91,49 +97,35 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://woaiqin.github.io/post/li-zong-qin-ni-shi-wo-de-ming">
-                  <h2 class="post-title">李宗秦，你是我的命</h2>
-                </a>
-                <div class="post-date">
-                  2019-11-09
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+          <div class="post-detail">
+            <h2 class="post-title">李宗秦，你是我的命</h2>
+            <div class="post-date">2019-11-09</div>
+            
+            <div class="post-content">
+              <p>❤️❤️💕</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://woaiqin.github.io/post/hello-gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                </div>
               </div>
-              
-                <a class="right" href="https://woaiqin.github.io/post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://woaiqin.github.io/post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -155,6 +147,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
